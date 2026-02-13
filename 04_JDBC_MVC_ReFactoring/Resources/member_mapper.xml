@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+
+<properties>
+	<entry key="insertMember">
+		INSERT INTO member VALUES(?, ?, ?, ?, ?, ?, ?, ?, SYSDATE)
+	</entry>
+	
+	<entry key="selectAll">
+		SELECT * FROM member
+	</entry>
+	
+	<entry key="selectByUserId">
+		SELECT *
+		FROM member
+		WHERE member_id = ?
+	</entry>
+	
+	<entry key="selectByUserName">
+		SELECT * 
+		FROM member
+		WHERE member_name LIKE ?
+	</entry>
+	
+	<entry key="updateMember">
+		UPDATE member 
+		SET member_pwd=?, email=?, phone=?, address=? 
+		WHERE member_id=?
+	</entry>
+	
+	<entry key="deleteMember">
+		DELETE FROM member 
+		WHERE member_id = ?
+	</entry>
+</properties>
